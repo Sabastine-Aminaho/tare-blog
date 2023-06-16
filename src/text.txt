@@ -1,0 +1,45 @@
+const [blogs, setBlogs] = useState([
+    {id: 1, title: 'My new website', body: 'lorem ipsum.....', author: 'William'},
+    {id: 2, title: 'Welcome party', body: 'lorem ipsum.....', author: 'Chigozie'},
+    {id: 3, title: 'Web Dev top tips', body: 'lorem ipsum.....', author: 'William'}
+  ])
+
+
+
+  const Navbar = () => {
+  return ( 
+    <nav className="navbar">
+      <h1>The Dojo Blog</h1>
+      <div className="links">
+        <a href="/">Home</a>
+        <a href="./create">New Blog</a>
+      </div>
+    </nav>
+   );
+}
+ 
+export default Navbar;
+
+
+// import Navbar from './Navbar';
+// import Home from './Home';
+
+import { useState } from "react";
+import BlogList from "./Bloglist";
+
+
+const Home = () => {
+  const [blogs, setBlogs] = useState([
+    {id: 1, title: 'My new website', body: 'lorem ipsum.....', author: 'William'},
+    {id: 2, title: 'Welcome party', body: 'lorem ipsum.....', author: 'Chigozie'},
+    {id: 3, title: 'Web Dev top tips', body: 'lorem ipsum.....', author: 'William'}
+  ])
+
+  return ( 
+    <div className="home">
+      <BlogList blogs={blogs} />
+    </div>
+   );
+}
+ 
+export default Home; 
